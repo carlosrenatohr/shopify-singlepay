@@ -16,9 +16,11 @@ class Init extends REST_Controller
         ];
 //        $prods = $this->call_get('https://' .$shop . '/admin/products.json?access_token=', $headers);var_dump($prods);
         $wh = [
-            "event" => "onload",
-            "src" => APP_URL . 'assets/main.js',
-            "display_scope" => 'all'
+            'script_tag' => [
+                "event" => "onload",
+                "src" => APP_URL . 'assets/main.js',
+                "display_scope" => 'all'
+            ]
         ];
         $nscript = $this->call_post('https://'. $shop . '/admin/script_tags.json', $wh, $headers);
         var_dump($nscript);
