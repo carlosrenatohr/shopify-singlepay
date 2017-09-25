@@ -1,0 +1,1 @@
+console.log('Single Pay');
